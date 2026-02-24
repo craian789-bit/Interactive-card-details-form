@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+  <title>Interactive card details form</title>
+
+  
+</head>
+<body>
+  <main class="conteiner">
+    <aside class="secao-esquerda">
+      <div class="cartoes-wrapper">
+        
+        <div class="cartao-frente">
+          <img class="logo" src="images/card-logo.svg" alt="logo">
+          <div class="info-cartao">
+            <p class="numero-exibicao" id="display-numero">0000 0000 0000 0000</p>
+            <div class="rodape-cartao">
+              <span id="display-nome">Jane Appleseed</span>
+              <span id="display-data">00/00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cartao-verso">
+          <span class="cvc-exibicao" id="display-cvc">000</span>
+        </div>
+
+      </div>
+    </aside>
+
+   <section class="formulario-wrapper">
+  <form id="card-form">
+    <div class="campo">
+      <label for="nome">Nome do titular</label>
+      <input type="text" id="nome" placeholder="e.g. Jane Appleseed">
+      <span class="error-message hidden" id="error-nome">Can't be blank</span>
+    </div>
+
+    <div class="campo">
+      <label for="numero">Número do cartão</label>
+      <input type="text" id="numero" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+      <span class="error-message hidden" id="error-numero">Can't be blank</span>
+    </div>
+
+    <div class="campos-curtos">
+      <div class="data">
+        <label>Exp. Date (MM/AA)</label>
+        <div class="inputs-data">
+          <input type="text" id="data-mm" placeholder="MM" maxlength="2">
+          <input type="text" id="data-aa" placeholder="AA" maxlength="2">
+        </div>
+        <span class="error-message hidden" id="error-data">Can't be blank</span>
+      </div>
+
+      <div class="cvc">
+        <label for="cvc">CVC</label>
+        <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3">
+        <span class="error-message hidden" id="error-cvc">Can't be blank</span>
+      </div>
+    </div>
+
+    <button type="submit" id="btn-confirmar">Confirm</button>
+  </form>
+
+  <div id="mensagem-sucesso" class="hidden">
+    <img src="./images/icon-complete.svg" alt="Ícone de completo">
+    <h1>THANK YOU!</h1>
+    <p>We've added your card details</p>
+    <button id="btn-continuar">Continue</button>
+  </div>
+</section>
+        
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style="text-decoration:none ;">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/craian789-bit" style="text-decoration:none ;">Raian</a>.
+    </div>
+  </footer>
+
+  
+</body>
+<script src="app.js"></script>
+</html>
