@@ -52,14 +52,17 @@
     </div>
 
     <div class="campos-curtos">
-      <div class="data">
-        <label>Exp. Date (MM/AA)</label>
-        <div class="inputs-data">
-          <input type="text" id="data-mm" placeholder="MM" maxlength="2">
-          <input type="text" id="data-aa" placeholder="AA" maxlength="2">
-        </div>
-        <span class="error-message hidden" id="error-data">Can't be blank</span>
-      </div>
+    <div class="campo data">
+  <fieldset>
+    <legend>Exp. Date (MM/AA)</legend>
+    
+    <div class="inputs-data">
+      <input type="text" id="data-mm" placeholder="MM" maxlength="2" aria-label="Mês de expiração">
+      <input type="text" id="data-aa" placeholder="AA" maxlength="2" aria-label="Ano de expiração">
+    </div>
+  </fieldset>
+  <span class="error-message hidden" id="error-data">Can't be blank</span>
+</div>
 
       <div class="cvc">
         <label for="cvc">CVC</label>
